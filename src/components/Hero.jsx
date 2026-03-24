@@ -49,17 +49,17 @@ export function Hero() {
         {/* Main headline */}
         <h1 className="stagger-2" style={{
           fontFamily: "'Clash Display', sans-serif",
-          fontSize: "clamp(3.5rem, 7.5vw, 7.5rem)",
+          fontSize: "clamp(3.5rem, 6vw, 6.5rem)",
           fontWeight: 800,
           lineHeight: 0.96,
           letterSpacing: "-0.03em",
           color: T.ink,
           marginBottom: "2rem",
-          maxWidth: "14ch",
+          maxWidth: "18ch",
         }}>
           We build<br />
-          websites<br />
-          <span style={{ color: T.violet, fontStyle: "normal" }}>that work.</span>
+          high-converting websites<br />
+          <span style={{ color: T.violet, fontStyle: "normal" }}>in 5 days.</span>
         </h1>
 
         {/* Descriptor */}
@@ -73,7 +73,7 @@ export function Hero() {
             color: T.inkMid, lineHeight: 1.75,
             maxWidth: 500,
           }}>
-            From local businesses getting online for the first time to startups that need a technical partner — we build digital products with care, precision, and a deep respect for craft.
+            Stop losing leads to bad design. We build premium, fast-loading websites for startups and businesses that elevate your branding and drive measurable results. Fast delivery guaranteed.
           </p>
           <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: "1.2rem" }}>
             <a href="#work" style={{
@@ -113,7 +113,7 @@ export function Hero() {
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 36px rgba(91,79,255,0.32)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 4px 24px rgba(91,79,255,0.22)"; }}
             >
-              Get a free quote
+              Get your website
               <span style={{ marginLeft: "0.75rem", fontSize: "1.1rem" }}>→</span>
             </a>
           </div>
@@ -126,10 +126,10 @@ export function Hero() {
           borderTop: `1px solid ${T.rule}`,
         }}>
           {[
-            { n: "3+",    l: "Projects live" },
-            { n: "48h",   l: "Average delivery" },
-            { n: "MERN",  l: "Tech stack" },
-            { n: "∞",     l: "What we're built for" },
+            { n: "10+",   l: "Projects completed" },
+            { n: "5 Days",l: "Fast delivery promise" },
+            { n: "100%",  l: "Client satisfaction" },
+            { n: "MERN",  l: "High-performance stack" },
           ].map(s => (
             <div key={s.l}>
               <div style={{

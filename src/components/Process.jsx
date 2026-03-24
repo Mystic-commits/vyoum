@@ -52,6 +52,28 @@ export function Process() {
             </div>
           ))}
         </div>
+
+        <div className="reveal" style={{ marginTop: "5rem", textAlign: "center" }}>
+          <a href="https://wa.me/919306034858?text=Hi!%20I'd%20like%20to%20get%20my%20website%20in%205%20days."
+             target="_blank" rel="noreferrer"
+             style={{
+               fontFamily: "'Satoshi', sans-serif",
+               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.8rem",
+               background: T.violet, color: T.white,
+               fontSize: "0.85rem", fontWeight: 600,
+               letterSpacing: "0.04em",
+               padding: "1.2rem 2.4rem",
+               borderRadius: 3,
+               textDecoration: "none",
+               transition: "transform 0.25s, box-shadow 0.25s",
+               boxShadow: "0 4px 24px rgba(91,79,255,0.22)",
+             }}
+             onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 36px rgba(91,79,255,0.32)"; }}
+             onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 4px 24px rgba(91,79,255,0.22)"; }}>
+            Get your website in 5 days
+            <span style={{ fontSize: "1.1rem" }}>→</span>
+          </a>
+        </div>
       </div>
     </section>
   );

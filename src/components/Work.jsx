@@ -8,9 +8,13 @@ const PROJECTS = [
     name: "BioEra Institute",
     category: "Education — NEET Coaching",
     year: "2025",
-    desc: "A 29-year legacy coaching institute needed a digital presence that matched their credibility. We built a premium dark-theme site designed to convert parents who find them searching online.",
+    desc: {
+      problem: "A 29-year legacy coaching institute lacked a digital presence that matched their real-world credibility.",
+      built: "A premium dark-theme website designed specifically for lead generation.",
+      result: "Positioned them as the premium choice and increased inquiries from parents searching online."
+    },
     deliverables: ["Web Design", "Development", "Deployment"],
-    link: "https://purple-essy-29.tiiny.site/?mode=suggestions",
+    link: "https://purple-essy-29.tiiny.site/",
     accent: "#1a3d2b",
   },
   {
@@ -18,7 +22,11 @@ const PROJECTS = [
     name: "Tomar Event",
     category: "Event Management",
     year: "2025",
-    desc: "Premium event management company specialising in weddings and ceremonies. We created a cinematic brand website with dark gold palette that positions them as the most premium choice in their market.",
+    desc: {
+      problem: "Premium event management company struggling to convey their high-end service quality online.",
+      built: "A cinematic brand website with a dark gold palette focused on visual storytelling.",
+      result: "Elevated brand perception, allowing them to confidently close higher-ticket clients."
+    },
     deliverables: ["Brand Identity", "Web Design", "Development"],
     link: "https://statutory-silver-z5b1nsse32.edgeone.app/",
     accent: "#7a5a1a",
@@ -28,7 +36,11 @@ const PROJECTS = [
     name: "MG Photography",
     category: "Photography Studio",
     year: "2025",
-    desc: "12 years of wedding photography deserved a website that matched the quality of the work. Warm amber tones, film-inspired textures, and an editorial layout that makes every visitor feel the craft.",
+    desc: {
+      problem: "12 years of stunning wedding photography limited by an outdated portfolio structure.",
+      built: "An editorial layout with warm amber tones and film-inspired textures.",
+      result: "Created an immersive experience that dramatically improved user engagement and booking rates."
+    },
     deliverables: ["Art Direction", "Web Design", "Development"],
     link: "https://motionless-tan-wtealcdpfn.edgeone.app/",
     accent: "#5a2d0a",
@@ -89,12 +101,17 @@ function WorkRow({ p, i }) {
           }}>{p.category}</span>
         </div>
 
-        <p style={{
+        <div style={{
           fontFamily: "'Satoshi', sans-serif",
           fontSize: "0.9rem", fontWeight: 400,
           color: T.inkSoft, lineHeight: 1.75,
           maxWidth: 560, marginBottom: "1.5rem",
-        }}>{p.desc}</p>
+          display: "flex", flexDirection: "column", gap: "0.6rem"
+        }}>
+          <div><strong style={{ color: T.ink }}>Problem:</strong> {p.desc.problem}</div>
+          <div><strong style={{ color: T.ink }}>What we built:</strong> {p.desc.built}</div>
+          <div><strong style={{ color: T.ink }}>Result:</strong> {p.desc.result}</div>
+        </div>
 
         <div style={{ display: "flex", gap: "0.6rem" }}>
           {p.deliverables.map(d => (
@@ -176,6 +193,27 @@ export function Work() {
 
         {/* Project rows */}
         {PROJECTS.map((p, i) => <WorkRow key={p.index} p={p} i={i} />)}
+
+        <div className="reveal" style={{ marginTop: "5rem", textAlign: "center" }}>
+          <a href="https://wa.me/919306034858?text=Hi!%20I'd%20like%20to%20start%20my%20project."
+            target="_blank" rel="noreferrer"
+            style={{
+              fontFamily: "'Satoshi', sans-serif",
+              display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.8rem",
+              background: T.ink, color: T.white,
+              fontSize: "0.85rem", fontWeight: 600,
+              letterSpacing: "0.04em",
+              padding: "1.2rem 2.4rem",
+              borderRadius: 3,
+              textDecoration: "none",
+              transition: "transform 0.25s, box-shadow 0.25s, background 0.25s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.background = T.violet; e.currentTarget.style.boxShadow = "0 8px 36px rgba(91,79,255,0.32)"; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.background = T.ink; e.currentTarget.style.boxShadow = "none"; }}>
+            Start your project
+            <span style={{ fontSize: "1.1rem" }}>→</span>
+          </a>
+        </div>
       </div>
     </section>
   );

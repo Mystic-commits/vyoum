@@ -3,12 +3,12 @@ import { T } from "../theme/tokens";
 import { SectionLabel } from "./SectionLabel";
 
 const SERVICES = [
-  { n: "01", title: "Business Websites", desc: "Fast, clean, mobile-first websites for local businesses. Custom every time — no templates, no shortcuts." },
-  { n: "02", title: "Landing Pages", desc: "Conversion-focused pages built to turn traffic into customers. Every element designed with purpose." },
-  { n: "03", title: "Full-Stack Web Apps", desc: "End-to-end applications using the MERN stack and Next.js. Scalable, secure, production-grade." },
-  { n: "04", title: "UI/UX Design", desc: "Interfaces people actually enjoy using. Every interaction considered, every pixel intentional." },
-  { n: "05", title: "SEO & Performance", desc: "Fast sites rank higher. We optimise every build for speed, search visibility, and real results." },
-  { n: "06", title: "Ongoing Support", desc: "We stay with you after launch. Updates, changes, and support — your digital presence is always current." },
+  { n: "01", title: "Landing Pages That Convert", desc: "Turn traffic into paying clients. We design strategic, high-converting landing pages focused entirely on driving more leads to your business." },
+  { n: "02", title: "Startup MVP Websites", desc: "Launch your idea faster. We build rapid, high-performance MVPs that give your startup the professional branding it needs to secure early traction." },
+  { n: "03", title: "Business Sites in 3-5 Days", desc: "Don't wait months for an agency. Get a premium, custom website that establishes massive trust for your local business in under a week." },
+  { n: "04", title: "UI/UX Design", desc: "Interfaces people actually enjoy using. Better design means lower bounce rates and a significantly better impression from your target audience." },
+  { n: "05", title: "SEO & Performance", desc: "Fast sites rank higher and convert better. We optimise every build for top-tier Google speed scores, making sure you capture all search intent." },
+  { n: "06", title: "Ongoing Support", desc: "We stay with you after launch. Focus on growing your business while we handle all updates, changes, and technical maintenance." },
 ];
 
 function ServiceCard({ s, i }) {
@@ -96,6 +96,28 @@ export function Services() {
           borderRadius: 4, overflow: "hidden",
         }}>
           {SERVICES.map((s, i) => <ServiceCard key={s.n} s={s} i={i} />)}
+        </div>
+
+        <div className="reveal" style={{ marginTop: "4rem", textAlign: "center" }}>
+          <a href="https://wa.me/919306034858?text=Hi!%20I'd%20like%20to%20discuss%20a%20project%20and%20get%20my%20website."
+             target="_blank" rel="noreferrer"
+             style={{
+               fontFamily: "'Satoshi', sans-serif",
+               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.8rem",
+               background: T.violet, color: T.white,
+               fontSize: "0.85rem", fontWeight: 600,
+               letterSpacing: "0.04em",
+               padding: "1.2rem 2.4rem",
+               borderRadius: 3,
+               textDecoration: "none",
+               transition: "transform 0.25s, box-shadow 0.25s",
+               boxShadow: "0 4px 24px rgba(91,79,255,0.22)",
+             }}
+             onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 36px rgba(91,79,255,0.32)"; }}
+             onMouseLeave={e => { e.currentTarget.style.transform = "none"; e.currentTarget.style.boxShadow = "0 4px 24px rgba(91,79,255,0.22)"; }}>
+            Book a Call
+            <span style={{ fontSize: "1.1rem" }}>→</span>
+          </a>
         </div>
       </div>
     </section>
