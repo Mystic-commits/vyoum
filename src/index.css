@@ -1,0 +1,73 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700,800&f[]=satoshi@300,400,500,600,700&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: #fafaf9;
+  color: #0f0f0f;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+::selection { background: #5b4fff; color: #fff; }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #fafaf9; }
+::-webkit-scrollbar-thumb { background: #5b4fff; border-radius: 2px; }
+
+a { color: inherit; text-decoration: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes navIn {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stagger-1 { animation: fadeUp 0.9s 0.1s cubic-bezier(0.16,1,0.3,1) both; }
+.stagger-2 { animation: fadeUp 0.9s 0.25s cubic-bezier(0.16,1,0.3,1) both; }
+.stagger-3 { animation: fadeUp 0.9s 0.4s cubic-bezier(0.16,1,0.3,1) both; }
+.stagger-4 { animation: fadeUp 0.9s 0.55s cubic-bezier(0.16,1,0.3,1) both; }
+.stagger-5 { animation: fadeUp 0.9s 0.7s cubic-bezier(0.16,1,0.3,1) both; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+              transform 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  .cur, .cur-ring { display: none !important; }
+  .nav-links { display: none !important; }
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+  .stat-row { gap: 2rem !important; flex-wrap: wrap; }
+}
