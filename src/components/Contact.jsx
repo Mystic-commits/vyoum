@@ -57,7 +57,7 @@ export function Contact() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {/* WhatsApp */}
-            <a href="https://wa.me/919306034858?text=Hi!%20I'd%20like%20to%20start%20a%20project%20with%20Vyoum."
+            <a href="https://wa.me/7247076274?text=Hi!%20I'd%20like%20to%20start%20a%20project%20with%20Vyoum."
               target="_blank" rel="noreferrer"
               style={{
                 fontFamily: "'Satoshi', sans-serif",
